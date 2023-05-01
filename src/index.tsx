@@ -7,6 +7,20 @@ import App from './App'
 import { AlertProvider } from './context/AlertContext'
 import reportWebVitals from './reportWebVitals'
 
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react')
+  const config = {
+    rules: [
+      {
+        id: 'skip-link',
+        enabled: true,
+      },
+    ],
+    disableDeduplicate: true,
+  }
+  axe(React, ReactDOM, 1000, config)
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <AlertProvider>
