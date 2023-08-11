@@ -1,6 +1,7 @@
 import {
   HARD_MODE_DESCRIPTION,
   HIGH_CONTRAST_MODE_DESCRIPTION,
+  DARK_MODE_DESCRIPTION,
 } from '../../constants/strings'
 import { BaseModal } from './BaseModal'
 import { SettingsToggle } from './SettingsToggle'
@@ -39,6 +40,7 @@ export const SettingsModal = ({
           settingName="Dark Mode"
           flag={isDarkMode}
           handleFlag={handleDarkMode}
+          description={DARK_MODE_DESCRIPTION}
         />
         <SettingsToggle
           settingName="High Contrast Mode"
